@@ -1,0 +1,23 @@
+<button>버튼</button>
+<script>
+const btn = document.querySelector("button")
+
+async function fnc(){
+    let promiseval = new Promise((성공, 실패)=>{
+        btn.addEventListener("click",()=>{성공("성공");})
+    }
+    )
+
+    let result = await promiseval;
+
+    console.log(result);
+}
+
+let promiseval = new Promise((성공, 실패)=>{
+    btn.addEventListener("click",()=>{성공("성공");})
+}
+)
+
+promiseval.then((e)=>{console.log(e)})
+
+</script>
